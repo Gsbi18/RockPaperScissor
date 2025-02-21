@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ű, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RockPaperScissor</title>
+</head>
+
+<body>
+    <div id="firstScene">
+
+        <h1 id="title">Üdvözöllek a játékomban!</h1>
+        <h2 id="subtitle">A jéáték neve a kő-papír-ollo</h2>
+        <p id="help">Ha nem ismernéd akkor elmagyarázom gyorsan. A kör 3mp-ig tart a meccset akkor nyered ha 5 pontot
+            érsz el.
+            Pontokat kör megnyerésével tudsz szerezni egy győzelem egy pontnak felel meg. A kör kezdetén 3 mp-ed lesz
+            választani a megjelenő szimbolumokból (kő-papír-olló). Az olló veri a papírt, a papír veri a követ, a kő
+            veri az
+            ollót. </p>
+        <h4>Ha készenállsz kattints a START gombra</h4>
+        <button id="startButton" onclick="start()">START</button>
+    </div>
+    <div id="gameScene">
+        <h3>Pontszám: Te <span id="meScores">0</span> - Ellenség <span id="enemyScores">0</span></h3>
+        <h3 id="timer"></h3>
+        <div class="enemy">
+            <img id="enemyPaper" class="pics enemyPics" src="/imgs/paper.png" alt="">
+            <img id="enemyRock" class="pics enemyPics" src="/imgs/rock.png" alt="">
+            <img id="enemyScissor" class="pics enemyPics" src="/imgs/scissor.png" alt="">
+            <hr>
+        </div>
+        <div class="me">
+
+
+            <img onclick="choosePaper()" class="pics" src="/imgs/paper.png" alt="">
+            <img onclick="chooseRock()" class="pics" src="/imgs/rock.png" alt="">
+            <img onclick="chooseScissor()" class="pics" src="/imgs/scissor.png" alt="">
+        </div>
+
+    </div>
+    <div id="endScene">
+        <h1 id="prompt"></h1>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
