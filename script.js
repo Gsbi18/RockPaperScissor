@@ -1,40 +1,33 @@
 var mePoint = Number(document.getElementById("meScores").textContent);
 var enemyPoint = Number(document.getElementById("enemyScores").textContent);
+
 function start() {
     document.getElementById("firstScene").style.display = 'none';
+    document.getElementById("endScene").style.display = 'none';
     document.getElementById("gameScene").style.display = 'block';
-
     let seconds = 0;
     const h1 = document.getElementById("timer");
     const images = document.getElementsByClassName("pics");
-
-    // Engedélyezzük a képekre kattintást
     for (let img of images) {
-        img.style.pointerEvents = "auto";
-        img.style.opacity = "1"; // Ha vizuális jelzés is kell
+        img.style.pointerEvents = "none";
+        img.style.opacity = "0.5"; 
     }
-
-    const interval = setInterval(() => {
-        seconds += 1;
-        h1.textContent = `Eltelt idő: ${seconds} másodperc`;
-
-        if (seconds >= 5) {
-            clearInterval(interval);
-            h1.textContent = "Lejárt az idő!";
-
-            // Letiltjuk a kattintást a képekre 2 másodpercre
-            for (let img of images) {
-                img.style.pointerEvents = "none";
-                img.style.opacity = "0.5"; // Vizuális jelzés
-            }
-
-            setTimeout(() => {
-                start(); // Újraindítjuk a játékot
-            }, 2000); // 2 másodperc szünet
+    setTimeout(() => {
+        for (let img of images) {
+            img.style.pointerEvents = "auto";
+            img.style.opacity = "1"; 
         }
     }, 1000);
-}
 
+}
+function reStart() {
+    mePoint = 0;
+    enemyPoint = 0;
+    document.getElementById("enemyScores").textContent = enemyPoint;
+    document.getElementById("meScores").textContent = mePoint;
+    start();
+
+}
 
 // Rock - 1 , Paper - 2 , Scissor - 3
 
@@ -74,6 +67,8 @@ function chooseRock() {
         document.getElementById("endScene").style.display = 'block';
         document.getElementById("prompt").textContent = "Sajnalám vesztettél";
     }
+    else start();
+
 }
 function choosePaper() {
     var me = 2;
@@ -110,6 +105,8 @@ function choosePaper() {
         document.getElementById("endScene").style.display = 'block';
         document.getElementById("prompt").textContent = "Sajnalám vesztettél";
     }
+    else start();
+
 }
 function chooseScissor() {
     var me = 3;
@@ -146,6 +143,6 @@ function chooseScissor() {
         document.getElementById("endScene").style.display = 'block';
         document.getElementById("prompt").textContent = 'Sajnalám vesztettél';
     }
-
+    else start();
 }
 

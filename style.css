@@ -1,7 +1,7 @@
 body {
     background: rgb(2, 0, 36);
-    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(79, 9, 121, 1) 70%, rgba(127, 6, 172, 1) 100%);
-    color: aliceblue;
+    background: white;
+    color: balck;
 }
 
 #firstScene {
@@ -44,12 +44,15 @@ body {
     background-color: #fff;
     margin: 10px;
     padding: 10px;
+    border: 1px solid black;
 
 }
 
 .enemyPics {
     display: none;
     transform: rotate(180deg);
+    border: none;
+ margin: auto;
 }
 
 #endScene {
@@ -59,6 +62,15 @@ body {
 #prompt {
     text-align: center;
     font-size: 40px;
-    color: #fff;
-    margin: auto;
+
+}
+
+#reStartButton {
+    background-color: rgb(255, 253, 253);
+    border: 1px solid black;
+    border-radius: 1;
+    height: 100px;
+    width: 100px;
+    font-size: 24px;
+    margin-left: 45%;
 }

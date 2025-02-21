@@ -10,21 +10,19 @@
 
 <body>
     <div id="firstScene">
-
         <h1 id="title">Üdvözöllek a játékomban!</h1>
-        <h2 id="subtitle">A jéáték neve a kő-papír-ollo</h2>
+        <h2 id="subtitle">A játék neve a kő-papír-olló</h2>
         <p id="help">Ha nem ismernéd akkor elmagyarázom gyorsan. A kör 3mp-ig tart a meccset akkor nyered ha 5 pontot
             érsz el.
-            Pontokat kör megnyerésével tudsz szerezni egy győzelem egy pontnak felel meg. A kör kezdetén 3 mp-ed lesz
-            választani a megjelenő szimbolumokból (kő-papír-olló). Az olló veri a papírt, a papír veri a követ, a kő
+            Pontokat kör megnyerésével tudsz szerezni egy győzelem egy pontnak felel meg. A kör kezdetén választanod
+            kell a megjelenő szimbolumokból (kő-papír-olló). Az olló veri a papírt, a papír veri a követ, a kő
             veri az
             ollót. </p>
         <h4>Ha készenállsz kattints a START gombra</h4>
         <button id="startButton" onclick="start()">START</button>
     </div>
     <div id="gameScene">
-        <h3>Pontszám: Te <span id="meScores">0</span> - Ellenség <span id="enemyScores">0</span></h3>
-        <h3 id="timer"></h3>
+        <h3>Pontszám: Én <span id="meScores">0</span> - Ellenség <span id="enemyScores">0</span></h3>
         <div class="enemy">
             <img id="enemyPaper" class="pics enemyPics" src="/imgs/paper.png" alt="">
             <img id="enemyRock" class="pics enemyPics" src="/imgs/rock.png" alt="">
@@ -32,18 +30,17 @@
             <hr>
         </div>
         <div class="me">
-
-
-            <img onclick="choosePaper()" class="pics" src="/imgs/paper.png" alt="">
             <img onclick="chooseRock()" class="pics" src="/imgs/rock.png" alt="">
+            <img onclick="choosePaper()" class="pics" src="/imgs/paper.png" alt="">
             <img onclick="chooseScissor()" class="pics" src="/imgs/scissor.png" alt="">
         </div>
 
     </div>
     <div id="endScene">
         <h1 id="prompt"></h1>
+        <button id="reStartButton" onclick="reStart()">RESTART</button>
     </div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 
 </body>
 
