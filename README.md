@@ -1,4 +1,4 @@
-Üdvözöllek a játékomban!
+# WEBDEV projekt
 
 A jaték neve a kő-papír-ollo
 
